@@ -1,6 +1,6 @@
 
 //02 - Startup name generator
-
+s
 
 
 // First I make two lists of words for the startup names
