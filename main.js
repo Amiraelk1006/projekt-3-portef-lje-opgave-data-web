@@ -82,7 +82,7 @@ console.log(studentGrades.length);
 // 3. Klassificer og log hver karakter i en af følgende kategorier - niveau 2
 
 // jeg har i denne del modtaget hjælp fra en medstuderende
-// Her skriver jeg else if for at tjekke hvike grade der falder idn
+// Her skriver jeg else if for at tjekke hvike grade der falder ind
 for (const grade of studentGrades) {
     if (grade >= 90) {
         console.log(`Grade: ${grade} -> A`);
@@ -99,15 +99,24 @@ for (const grade of studentGrades) {
 
 
 
+//4. Evaluate overall class performance - level 2
 
 
+if (studentGrades.length === 0) {
+    console.log("Ingen karakterer at evaluere.");
+} else {
+    const sum = studentGrades.reduce((acc, g) => acc + g, 0);
+    const average = sum / studentGrades.length;
 
-
-
-
-
-
-
-
-
-
+    let performance;
+    if (average >= 90) {
+        performance = "Excellent";
+    } else if (average >= 80) {
+        performance = "Good";
+    } else if (average >= 70) {
+        performance = "Satisfactory";
+    } else {
+        performance = "Needs Improvement";
+    }
+    console.log(`Gennemsnit: ${average.toFixed(2)} -> ${performance}`);
+}
