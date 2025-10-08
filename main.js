@@ -1,30 +1,30 @@
 
 //02 - Startup name generator
-s
 
 
-// First I make two lists of words for the startup names
-const firstPart = ["Tech", "Inno", "Smart", "Blue", "Next", "Bright", "Quantum", "Rapid", "Future", "Digital"];
-const secondPart = ["Vision", "Solutions", "Systems", "Works", "Dynamics", "Hub", "Network", "Innovations", "Labs", "Path"];
+// Array 1: First part of the startup name
+const firstword = ["Tech", "Inno", "Smart", "Blue", "Next", "Bright", "Quantum", "Rapid", "Future", "Digital"];
+// Array 2: Second part of the startup name
+const secondword = ["Vision", "Solutions", "Systems", "Works", "Dynamics", "Hub", "Network", "Innovations", "Labs", "Path"];
 
-// Now I want to make a function that picks a random word from each list
-function getStartupName() {
-    // Pick a random index for the first word
-    const firstIndex = Math.floor(Math.random() * firstPart.length);
-
-    // Pick a random index for the second word
-    const secondIndex = Math.floor(Math.random() * secondPart.length);
-
-    // Combine the two words with a space in between and return it
-    return firstPart[firstIndex] + " " + secondPart[secondIndex];
+//Her laver jeg et navn
+const getStartUpName = () =>{
+    const firstNum = Math.floor(Math.random() * firstword.length)
+    const secondNum = Math.floor(Math.random() * secondword.length)
+    return `${firstword[firstNum]} ${secondword[secondNum]}`
 }
 
-// Then i test it a few times to see some names
-console.log("Your startup name could be: " + getStartupName());
-console.log("Your startup name could be: " + getStartupName());
-console.log("Your startup name could be: " + getStartupName());
+console.log("Your startup name is: " + getStartUpName() )
+
+
+
 
 
 
 
 //03 - Treasure Hunter
+//level 1
+const island = ['-', '-', 'T',  '-', '-'];
+//tæller hvor mange index der er i array
+//+ for mellemrum
+console.log("there are " + island.length + " moves on the island")
