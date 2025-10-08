@@ -124,3 +124,36 @@ if (studentGrades.length === 0) {
 
 
 
+// 6. Output - viser højeste, laveste, gennemsnit og alle karakterer
+
+// Her finder jeg den højeste og laveste karakter med a Math.max og Math.min
+// jeg har fået hjælp til igen af en medstuderende
+const highest = Math.max(...studentGrades);
+const lowest = Math.min(...studentGrades);
+
+// her finder man gennemsnittet
+const average = studentGrades.reduce((a, b) => a + b, 0) / studentGrades.length;
+
+// bogstaverne er ude fra talene
+//her har jeg fået hjælp af ai
+function getLetter(grade) {
+    if (grade >= 90) return "A";
+    else if (grade >= 80) return "B";
+    else if (grade >= 70) return "C";
+    else if (grade >= 60) return "D";
+    else return "F";
+}
+
+// her logger jeg dem så vi kan se dem
+//hjælp fra medstuderende
+console.log("OUTPUT ");
+console.log("Highest Grade:", highest, "(", getLetter(highest), ")");
+console.log("Lowest Grade:", lowest, "(", getLetter(lowest), ")");
+console.log("Average Grade:", average.toFixed(1), "(", getLetter(average), ")");
+
+
+
+
+
+// 6 - Dice Rolling Championship
+
