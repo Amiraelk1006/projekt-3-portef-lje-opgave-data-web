@@ -53,7 +53,24 @@ console.log('There are ' + treasures + ' treasures at this island');
 
 //level 3
 
+const island2 = ['-', '-', 'T',  '-', '-'];
 
+//Variablet tæller skattene
+let treasures1 = 0;
+
+// Her tæller vi fra hvert felt
+for(const cell of island2){
+    if (cell === 'T'){
+        treasures1++;
+    }
+}
+// her logger vi ud hvor mange skatte der bliver fundet
+console.log(`There are ${treasures1} treasures on the island`);
+
+
+
+
+//
 
 
 
