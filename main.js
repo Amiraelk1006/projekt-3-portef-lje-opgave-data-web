@@ -21,13 +21,49 @@ console.log("Your startup name is: " + getStartUpName() )
 
 
 
-
-
-
-
 //03 - Treasure Hunter
 //level 1
 const island = ['-', '-', 'T',  '-', '-'];
 //tæller hvor mange index der er i array
 //+ for mellemrum
 console.log("there are " + island.length + " moves on the island")
+
+
+
+//level 2
+const island1 = ['-', '-', 'T',  '-', '-'];
+
+// Her tæller variabelet treasures skattene
+let treasures = 0
+console.log("There's " + island.length + " moves on this island");
+
+//Note til mig selv variablet 1 kører talene 0,1,2,3,4,5
+for (let i = 0; i < 5; i++){
+    if (island1[1]=== 'T'){
+        console.log(`treasure found at move ${i + 1} :)`);
+        // hvis der fundet mere end 1
+        treasures++;
+    }else {
+        console.log('no treasure found');
+    }
+}
+
+console.log('There are ' + treasures + ' treasures at this island');
+
+
+//level 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
