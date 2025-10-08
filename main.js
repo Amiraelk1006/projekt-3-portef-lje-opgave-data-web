@@ -191,3 +191,47 @@ console.log(`${player1} rolled: ${player1Roll}`);
 // andet kast
 const player2Roll = rollDice();
 console.log(`${player2} rolled: ${player2Roll}`);
+
+
+
+//Level 3 - Track Scores
+// dette er to variabler
+let total1 = 0, total2 = 0;
+
+// for it to be played 10 rounds i use a loop that runs 10 times  so we get 10 rounds in total.
+//her har jeg benyttet ai for at opsætte runderne
+for (let i = 1; i <= 10; i++) {
+    console.log(`Runde ${i}`);
+
+    // this gives me  a random number between 1 and 6
+    prompt(`${player1}, tryk Enter for at slå`);
+    const roll1 = rollDice();
+
+    // again this gives me  a random number between 1 and 6
+    prompt(`${player2}, tryk Enter for at slå`);
+    const roll2 = rollDice();
+
+
+    //here i add each roll to their total score.
+    total1 += roll1;
+    total2 += roll2;
+
+    // This shows each player’s roll and total score
+    console.log(`${player1} slog ${roll1} (total: ${total1})`);
+    console.log(`${player2} slog ${roll2} (total: ${total2})`);
+}
+
+// when all 10 rounds are done we show the result
+console.log(`\nSlutresultat: ${player1} = ${total1}, ${player2} = ${total2}`);
+
+// then i check  who has the higher score
+console.log(`\nSlutresultat: ${player1} = ${total1}, ${player2} = ${total2}`);
+console.log(total1 > total2 ? `${player1} vandt! ` : total2 > total1 ? `${player2} vandt! ` : "Uafgjort ");
+
+
+
+
+
+
+
+//Level 4 - Complete Game (10 Rounds)
