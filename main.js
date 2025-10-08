@@ -101,7 +101,7 @@ for (const grade of studentGrades) {
 
 //4. Evaluate overall class performance - level 2
 
-
+//Jeg har modtaget hjælp fra en medstuderende
 if (studentGrades.length === 0) {
     console.log("Ingen karakterer at evaluere.");
 } else {
@@ -120,3 +120,7 @@ if (studentGrades.length === 0) {
     }
     console.log(`Gennemsnit: ${average.toFixed(2)} -> ${performance}`);
 }
+
+
+
+
