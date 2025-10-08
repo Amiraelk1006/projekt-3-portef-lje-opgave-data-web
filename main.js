@@ -135,7 +135,7 @@ const lowest = Math.min(...studentGrades);
 const average = studentGrades.reduce((a, b) => a + b, 0) / studentGrades.length;
 
 // bogstaverne er ude fra talene
-//her har jeg fået hjælp af ai
+//her har jeg fået hjælp af en medstuderende, som har anvendt til opbygningen af funktionen
 function getLetter(grade) {
     if (grade >= 90) return "A";
     else if (grade >= 80) return "B";
@@ -157,3 +157,37 @@ console.log("Average Grade:", average.toFixed(1), "(", getLetter(average), ")");
 
 // 6 - Dice Rolling Championship
 
+
+// Level 1 - Player Setup
+
+// her får jeg prompt til at spørge om player 1 og 2s navn
+const player1 = prompt("Enter Player 1's name:");
+const player2 = prompt("Enter Player 2's name:");
+
+// Her logger vi dem ud så de kommer frem på cosolen
+//"Welcome to the Dice Rolling Championship" har jeg skrevet bare så man kan se hvilke opgave vi er i
+console.log("Welcome to the Dice Rolling Championship")
+console.log("Player 1:", player1);
+console.log("Player 2:", player2);
+
+
+
+//Level 2 - Single Round
+//jeg skriver function da den så vil vælge et tal mellem 1 - 6
+function rollDice(){
+    //math.random tager et tilfældigt tal mellem 1-6
+    return Math.floor(Math.random() * 6) + 1;
+}
+//ved hjælp af denne function altså prompt, får man muligheden for at trykke som et spil
+prompt(`${player1}, press Enter to roll...`);
+
+
+// vi logger dem nu ud for at terningerne bliver kastet og det random tal bliver valgt for player 1 og 2
+//første kast
+const player1Roll = rollDice();
+console.log(`${player1} rolled: ${player1Roll}`);
+
+
+// andet kast
+const player2Roll = rollDice();
+console.log(`${player2} rolled: ${player2Roll}`);
