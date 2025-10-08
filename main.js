@@ -29,6 +29,7 @@ const island = ['-', '-', 'T',  '-', '-'];
 console.log("there are " + island.length + " moves on the island")
 
 
+//jeg har fået hjælp af klassekamarater
 
 //level 2
 const island1 = ['-', '-', 'T',  '-', '-'];
@@ -69,8 +70,34 @@ console.log(`There are ${treasures1} treasures on the island`);
 
 
 
+//04 - Student Grades Analysis
 
-//
+//if else   math.floor
+// 1
+const studentGrades=[85, 78, 68, 63, 95, 58, 72, 54]
+
+console.log(studentGrades.length);
+
+
+// 3. Klassificer og log hver karakter i en af følgende kategorier - niveau 2
+
+// jeg har i denne del modtaget hjælp fra en medstuderende
+// Her skriver jeg else if for at tjekke hvike grade der falder idn
+for (const grade of studentGrades) {
+    if (grade >= 90) {
+        console.log(`Grade: ${grade} -> A`);
+    } else if (grade >= 80) {
+        console.log(`Grade: ${grade} -> B`);
+    } else if (grade >= 70) {
+        console.log(`Grade: ${grade} -> C`);
+    } else if (grade >= 60) {
+        console.log(`Grade: ${grade} -> D`);
+    } else {
+        console.log(`Grade: ${grade} -> F`);
+    }
+}
+
+
 
 
 
